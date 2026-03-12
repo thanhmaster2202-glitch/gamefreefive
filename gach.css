@@ -1,0 +1,83 @@
+/* 1. Căn chỉnh toàn bộ trang */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Ngăn hiện thanh cuộn */
+    background-color: #020617; /* Màu nền đen sâu của không gian */
+    
+    /* Sử dụng Flexbox để đưa nội dung vào giữa */
+    display: flex;
+    justify-content: center; /* Căn giữa ngang */
+    align-items: center;     /* Căn giữa dọc */
+}
+
+/* 2. Container chứa Game */
+.game-container {
+    position: relative;
+    box-shadow: 0 0 50px rgba(56, 189, 248, 0.2); /* Đổ bóng phát sáng nhẹ cho khung game */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* 3. Canvas (đảm bảo hiển thị sắc nét) */
+#gameCanvas {
+    display: block;
+    background-color: #020617;
+}
+
+/* 4. Màn hình Start (đè lên trên Canvas) */
+#startScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(2, 6, 23, 0.85); /* Làm mờ nền khi ở menu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+/* 5. Giao diện Menu */
+.menu-box {
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu-box h1 {
+    font-size: 64px;
+    letter-spacing: 10px;
+    margin: 0;
+    color: #38bdf8;
+    text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+}
+
+.line {
+    width: 80px;
+    height: 4px;
+    background: #fbbf24;
+    margin: 20px auto;
+}
+
+button {
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    background: transparent;
+    color: #38bdf8;
+    border: 2px solid #38bdf8;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #38bdf8;
+    color: #020617;
+    box-shadow: 0 0 20px #38bdf8;
+}
