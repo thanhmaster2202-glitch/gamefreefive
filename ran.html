@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Snake Cosmic Edition</title>
+    <link rel="stylesheet" href="ran.css">
+</head>
+<body>
+    <div class="stats">
+        <div id="score">SCORE: 000</div>
+        <div id="level">LEVEL: 01</div>
+        <div id="lives">❤️❤️❤️</div>
+    </div>
+
+    <div id="game-board">
+        <div id="start-menu" class="overlay">
+            <h1>SNAKE COSMIC</h1>
+            <p>CHỌN CHẾ ĐỘ BAY:</p>
+            <div class="mode-options">
+                <label><input type="radio" name="mode" value="200"> EASY (Tập sự)</label>
+                <label><input type="radio" name="mode" value="120" checked> MEDIUM (Phi công)</label>
+                <label><input type="radio" name="mode" value="60"> HARD (Huyền thoại)</label>
+            </div>
+            <button onclick="startGame()">BẮT ĐẦU</button>
+        </div>
+
+        <div id="game-over" class="overlay" style="display: none;">
+            <h1>MISSION FAILED</h1>
+            <p id="final-score"></p>
+            <button onclick="showMenu()">QUAY LẠI MENU</button>
+        </div>
+    </div>
+
+    <script src="ran.js"></script>
+</body>
+</html>
